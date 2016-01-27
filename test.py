@@ -1,0 +1,5 @@
+# -*- coding: utf-8 -*-
+
+
+body = {"rc":1,"me":"","ywad":[{"adTitle":"title1","adImage":"地址图片1","adUrl":"跳转地址1"},{"adTitle":"title2","adImage":"地址图片2","adUrl":"跳转地址2"},{"adTitle":"title3","adImage":"地址图片3","adUrl":"跳转地址3"}],"news":[{"id":"20160127589915680","newsid":"20160127589915680","url_w":"http://finance.eastmoney.com/news/1345,20160127589915680.html","url_m":"eastmoney://page/newsdetail?newsid=20160127589915680&newstype=1","title":"沪指大幅下挫 盘中跌破2700点关口","simtitle":"沪指大跌 盘中跌破2700","digest":"【沪指大幅下挫 跌破2700】沪指今日小幅高开后即震荡下挫，截至发稿，沪指跌逾2%，跌破2700点。热点板块稀少，市场人气有待恢复。","simdigest":"盘面上热点板块稀少，市场人气有待恢复。","image":"http://z1.dfcfw.com/2016/1/27/20160127112423914873001.jpg","titlestyle":"0","url_pdf":"","type":"3","simtype":"0","simtype_zh":"","topic":null,"simspecial":null,"simtopic":null,"column":"","showtime":"2016-01-27 13:26:55","ordertime":"2016-01-27 13:59:57","commentnum":"1214","newstype":"1"}],"adlist":null,"PageCount":1,"AllCount":500,"AtPage":1,"MaxID":"20160127589915680","MinID":"20160127589915680"}
+print body['news']['id']
