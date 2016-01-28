@@ -21,26 +21,29 @@ class dataRequest:
             print
         return listJson
 
-    #请求正文
+    #请求正文，返回news body节点里的内容
     def contentRequest(self,newsid):
         baseUrl= 'http://newsapi.eastmoney.com/kuaixun/v2/api/content'
         params = {'newstype':'1','source':'app','sys':'ios','version':'6000'}
         params['newsid']=newsid
-        response = requests.get(url=baseUrl,params=params)
-        return response
+        response = requests.get(url=baseUrl,params=params).text
+        contentJson = json.loads(response)
+        body = contentJson['news']['body']
+        return body
     #列表元素
     def parseList(self,listRequest):
         pass
 
-a = dataRequest()
+#a = dataRequest()
 #a.listRequest()
+'''
 contentData = a.contentRequest(newsid='20160127589986793').text
 contentJson = json.loads(contentData)
 body = contentJson['news']['body']
 print contentData
 print type(contentData)
 print body
-
+'''
 
 
 '''
