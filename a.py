@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import requests
 import json
+import os
 
 class dataRequest:
     #请求列表,并打印每条新闻
