@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from a import dataRequest
 from bs4 import BeautifulSoup
+import re
 
 body = dataRequest().contentRequest(newsid='20160127589986793')
 
@@ -22,11 +23,18 @@ html = fakeHead+body+fakeTail
 soup = BeautifulSoup(html,'html.parser')
 print soup.prettify()
 print type(soup.p)
+print '---------------------------------------'
+soup1 = soup.find_all('p')
+print 'soup1:  ',soup1
+print 'type soup1:  ',type(soup1)
+print 'count of soup1:  ',len(soup1) #列表元素数
+for i in range(len(soup1)):
+    print 'soup1[%d]:  %s'%(i,soup1[i])
+
 #print type(soup.p)
 #soup = repr(soup)
 
-#print soup.p
-#print soup.find_all('p')
+
 
 '''
 p中有带br
@@ -36,3 +44,4 @@ span
  <!--Link#1-->
 </p>
 '''
+link = re.compile('')
