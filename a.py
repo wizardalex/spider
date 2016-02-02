@@ -4,10 +4,13 @@ import json
 
 
 class dataRequest:
+    def __init__(self,page):
+        self.page = page
+        pass
     #请求列表,并打印每条新闻
     def listRequest(self):
         baseUrl = 'http://newsapi.eastmoney.com/kuaixun/v2/api/yw'
-        page = 1  #请求的页数
+        #page = 1  #请求的页数
         limit = page*20  #请求的条数
         params = {'encode':'ywjh','source':'app','sys':'ios','version':'6000'}
         params['limit'] = limit

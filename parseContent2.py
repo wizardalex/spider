@@ -3,7 +3,7 @@ from a import dataRequest
 from bs4 import BeautifulSoup
 import re
 
-body = dataRequest().contentRequest(newsid='20160127589986793')
+body = dataRequest(page='1').contentRequest(newsid='20160127589986793')
 
 fakeHead = """
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
