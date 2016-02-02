@@ -3,7 +3,7 @@ from a import dataRequest
 from bs4 import BeautifulSoup
 import re
 
-body = dataRequest(page='1').contentRequest(newsid='20160127589986793')
+body = dataRequest(page='1').contentRequest(newsid='20160202591903597')
 
 fakeHead = """
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -25,14 +25,19 @@ print soup.prettify()
 print type(soup.p)
 print '---------------------------------------'
 soup1 = soup.find_all('p')
-print 'soup1:  ',soup1
-print 'type soup1:  ',type(soup1)
+#print 'soup1:  ',soup1
 print 'count of soup1:  ',len(soup1) #列表元素数
 for i in range(len(soup1)):
-    print 'soup1[%d]:  %s'%(i,soup1[i])
-
+    print 'soup1[%d]:  %s'%(i,soup1[i].text)
+print '---------------------------------------'
+#print soup1[9].text
 #print type(soup.p)
 #soup = repr(soup)
+
+for i in range(len(soup1)):
+    if soup1[i].text:
+        print ' '+' '+' '+' '+ ' '+ soup1[i].text
+
 
 
 
