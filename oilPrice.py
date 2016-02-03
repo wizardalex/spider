@@ -22,6 +22,7 @@ class dataRequest:
 
 #全国31省油价
 price = dataRequest(prov='').oilPrice().text
+print price
 
 '''
 soup = BeautifulSoup(price,'html.parser')
